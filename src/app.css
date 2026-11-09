@@ -13,6 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@property --offset {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@font-face {
+  font-family: "Hlynur";
+  src: url("./assets/HjudsinktrapsVF.ttf") format("truetype"); /* Chrome 6+, Firefox
+ 3.6+, IE 9+, Safari 5.1+ */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -35,15 +47,27 @@ h1 {
   line-height: 1.1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Hlynur, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
 .card {
   padding: 2em;
 }
 
 #app {
   max-width: 1280px;
+  min-height: 90vh;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 button {
